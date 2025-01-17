@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="440.0" style="-fx-background-color: #a1bfc9; -fx-border-color: #21637A;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.morpion_.ScoreController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="20.0" layoutY="22.0" prefHeight="103.0" prefWidth="400.0" style="-fx-background-color: #21637A;">
+         <children>
+            <Label alignment="CENTER" text="Score" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Line endX="300.0" stroke="WHITE" strokeWidth="2.0" />
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="343.0" spacing="15.0">
+               <children>
+                  <Label fx:id="nomJoueur1Score" prefHeight="20.0" prefWidth="125.0" text="Joueur 1" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nbVictoireJ1" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="-" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="nbVictoireJ2" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nomJoueur2Score" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="125.0" text="Joueur 2" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="20.0" layoutY="139.0" prefHeight="80.0" prefWidth="400.0" spacing="25.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="80.0" prefWidth="110.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onQuitterClick" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #b52727;" text="Quitter" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="1.0" offsetY="1.0" radius="7.0" width="15.0" />
+                     </effect>
+                  </Button>
+                  <Label>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="80.0" prefWidth="110.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onRejouerMnomsClick" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #16c416;" text="Rejouer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="1.0" offsetY="1.0" radius="7.0" width="15.0" />
+                     </effect>
+                  </Button>
+                  <Label text="(mêmes noms)">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="80.0" prefWidth="110.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onRejouerNnomsClick" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #21637A;" text="Rejouer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="15.0" offsetX="1.0" offsetY="1.0" radius="7.0" width="15.0" />
+                     </effect>
+                  </Button>
+                  <Label text="(nouveaux noms)">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>

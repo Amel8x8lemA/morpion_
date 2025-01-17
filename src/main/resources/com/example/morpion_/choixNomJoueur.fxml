@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="600.0" style="-fx-background-color: #53B7DB;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.morpion_.ChoixNomJoueurController">
+   <children>
+      <Label layoutX="216.0" layoutY="26.0" text="Qui joue ?" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <effect>
+            <Glow level="0.5" />
+         </effect>
+      </Label>
+      <HBox alignment="CENTER" layoutX="125.0" layoutY="395.0" prefHeight="47.0" prefWidth="350.0" spacing="75.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onRetourButtonClick" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #b52727;" text="Retour" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow height="15.0" offsetX="1.0" offsetY="1.0" radius="7.0" width="15.0" />
+               </effect>
+            </Button>
+            <Button fx:id="jouerButton" mnemonicParsing="false" onAction="#onJouerButton" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #21637A;" text="Jouer" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow height="15.0" offsetX="1.0" offsetY="1.0" radius="7.0" width="15.0" />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="50.0" layoutY="105.0" prefHeight="204.0" prefWidth="500.0" spacing="35.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #21637A; -fx-background-radius: 30;" text="Joueur 1 :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="Nom :">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nomJoueur1" prefHeight="35.0" prefWidth="130.0" promptText="Yoda">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="Joue en 1er :">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="ordreJoueur1First" mnemonicParsing="false">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="ordreTour" />
+                           </toggleGroup>
+                        </RadioButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <Line startY="200.0" />
+            <VBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #21637A; -fx-background-radius: 30;" text="Joueur 2 :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="175.0" spacing="10.0">
+                     <children>
+                        <Label text="Nom :">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nomJoueur2" prefHeight="35.0" prefWidth="130.0" promptText="Vador">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="Joue en 1er :">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="ordreJoueur2First" mnemonicParsing="false" toggleGroup="$ordreTour" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="247.0" layoutY="328.0" text="Ordre aléatoire">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="292.0" layoutY="349.0" mnemonicParsing="false" selected="true" toggleGroup="$ordreTour" />
+      <Line layoutX="50.0" layoutY="308.0" startX="500.0" />
+      <Line layoutX="50.0" layoutY="107.0" startX="500.0" />
+   </children>
+</Pane>
